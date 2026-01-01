@@ -14,9 +14,11 @@ const VolumeProductionSection = () => {
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
             Section 01
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
             Volume Production
           </h2>
+
           <p className="text-muted-foreground text-lg max-w-2xl">
             An overview of our production capabilities, showcasing the volume of pieces
             processed and key operational metrics.
@@ -31,35 +33,70 @@ const VolumeProductionSection = () => {
         >
           <div className="kpi-card">
             <Package className="w-8 h-8 text-secondary mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">Number of pieces processed</p>
-            <p className="text-4xl font-bold text-secondary">42.54k</p>
+            <p className="text-muted-foreground text-sm mb-1">
+              Number of pieces processed
+            </p>
+
+            <QlikEmbed
+              objectId={qlikConfig.charts.volumeProduction.piecesProcessed}
+              height="90px"
+            />
           </div>
+
           <div className="kpi-card">
             <Clock className="w-8 h-8 text-secondary mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">Average processing time</p>
-            <p className="text-4xl font-bold text-secondary">01:07</p>
+            <p className="text-muted-foreground text-sm mb-1">
+              Average processing time
+            </p>
+
+            <QlikEmbed
+              objectId={qlikConfig.charts.volumeProduction.avgProcessingTime}
+              height="90px"
+            />
           </div>
+
           <div className="kpi-card">
             <AlertTriangle className="w-8 h-8 text-accent mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">NOK pieces</p>
-            <p className="text-4xl font-bold text-accent">414</p>
+            <p className="text-muted-foreground text-sm mb-1">
+              NOK pieces
+            </p>
+
+            <QlikEmbed
+              objectId={qlikConfig.charts.volumeProduction.nokPieces}
+              height="90px"
+            />
           </div>
         </div>
 
         {/* Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <div className={`${isInView ? "animate-slide-in-left delay-200" : "opacity-0"}`}>
+          <div
+            className={`${
+              isInView ? "animate-slide-in-left delay-200" : "opacity-0"
+            }`}
+          >
             <div className="chart-container p-4">
-              <h3 className="font-semibold mb-4 text-lg">NOK Pieces Details</h3>
+              <h3 className="font-semibold mb-4 text-lg">
+                NOK Pieces Details
+              </h3>
+
               <QlikEmbed
                 objectId={qlikConfig.charts.volumeProduction.nokTable}
                 height="350px"
               />
             </div>
           </div>
-          <div className={`${isInView ? "animate-slide-in-right delay-200" : "opacity-0"}`}>
+
+          <div
+            className={`${
+              isInView ? "animate-slide-in-right delay-200" : "opacity-0"
+            }`}
+          >
             <div className="chart-container p-4">
-              <h3 className="font-semibold mb-4 text-lg">Average Pieces by Weekday</h3>
+              <h3 className="font-semibold mb-4 text-lg">
+                Average Pieces by Weekday
+              </h3>
+
               <QlikEmbed
                 objectId={qlikConfig.charts.volumeProduction.weekdayChart}
                 height="350px"
@@ -69,16 +106,21 @@ const VolumeProductionSection = () => {
         </div>
 
         {/* Narrative Box */}
-        <div className={`narrative-box ${isInView ? "animate-fade-up delay-300" : "opacity-0"}`}>
+        <div
+          className={`narrative-box ${
+            isInView ? "animate-fade-up delay-300" : "opacity-0"
+          }`}
+        >
           <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
             <span className="w-2 h-2 bg-secondary rounded-full" />
             Key Insights
           </h4>
+
           <p className="text-muted-foreground leading-relaxed">
-            In this overview of volume, we can observe that we have a huge amount of pieces
-            produced, divided between the 5 days that the factory is open. We can also observe
-            the super high ratio of OK pieces in the top right corner. More about quality in
-            the next sheets.
+            In this overview of volume, we can observe that we have a huge amount
+            of pieces produced, divided between the 5 days that the factory is
+            open. We can also observe the super high ratio of OK pieces in the
+            top right corner. More about quality in the next sheets.
           </p>
         </div>
       </div>

@@ -9,7 +9,7 @@ export const qlikConfig = {
   clientId: "019b798ccbe3fb8c2511802d69fa569a",
   
   // Your Qlik Sense App ID
-  appId: "YOUR_APP_ID",
+  appId: "4d79a37c-4dc7-42ab-879a-d655b2c2b090",
   
   // Redirect URI - will be set dynamically based on current origin
   getRedirectUri: () => `${window.location.origin}/oauth_callback.html`,
@@ -36,7 +36,7 @@ export const qlikConfig = {
     
     // Quality Analysis Section
     qualityAnalysis: {
-      nokRatio: "YOUR_OBJECT_ID_11", // NOK pieces ratio
+      nokRatio: "UJaWJcJ", // NOK pieces ratio
       avgNokTorque: "YOUR_OBJECT_ID_12", // Average NOK Torque
       paretoChart: "YOUR_OBJECT_ID_13", // Pieces generating non torque
       nokRatioOverTime: "YOUR_OBJECT_ID_14", // NOK Ratio Over Time
