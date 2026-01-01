@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAF Westerlo Axle Factory Dashboard</title>
+    <meta name="description" content="Interactive data dashboard for DAF's Westerlo Axle Factory - exploring production volumes, quality metrics, and operational insights." />
+    <meta name="author" content="DAF Trucks N.V." />
+
+    <meta property="og:title" content="DAF Westerlo Axle Factory Dashboard" />
+    <meta property="og:description" content="Interactive data dashboard exploring production volumes, quality metrics, and operational insights." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- 
+      QLIK EMBED WEB COMPONENTS
+      =========================
+      IMPORTANT: Update the data attributes below with your Qlik Cloud configuration:
+      
+      1. data-host: Your Qlik Cloud tenant URL 
+         Example: "https://your-tenant.us.qlikcloud.com"
+      
+      2. data-client-id: Your OAuth Client ID from Qlik Cloud Administration
+         Example: "b28f6c2a232aa22b1ddf2c03bc7bcbe8"
+      
+      3. data-redirect-uri: Automatically set to your domain + /oauth_callback.html
+    -->
+    <script 
+      crossorigin="anonymous" 
+      type="application/javascript"
+      src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components"
+      data-host="https://ul43b4wbjjj0xk1.de.qlikcloud.com"
+      data-client-id="019b798ccbe3fb8c2511802d69fa569a"
+      data-redirect-uri=""
+      data-auto-redirect="true"
+      data-access-token-storage="session">
+    </script>
+    <script>
+      // Dynamically set redirect URI based on current origin
+      (function() {
+        var script = document.querySelector('script[data-redirect-uri]');
+        if (script) {
+          script.setAttribute('data-redirect-uri', window.location.origin + '/oauth_callback.html');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
