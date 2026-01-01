@@ -18,7 +18,7 @@ export const qlikConfig = {
   charts: {
     // Volume Production Section
     volumeProduction: {
-      piecesProcessed: "YOUR_OBJECT_ID_1", // Number of pieces processed KPI
+      piecesProcessed: "UJaWJcJ", // Number of pieces processed KPI
       avgProcessingTime: "YOUR_OBJECT_ID_2", // Average processing time KPI
       nokPieces: "YOUR_OBJECT_ID_3", // NOK pieces KPI
       nokTable: "YOUR_OBJECT_ID_4", // NOK pieces table
@@ -36,7 +36,7 @@ export const qlikConfig = {
     
     // Quality Analysis Section
     qualityAnalysis: {
-      nokRatio: "UJaWJcJ", // NOK pieces ratio
+      nokRatio: "YOUR_OBJECT_ID_11", // NOK pieces ratio
       avgNokTorque: "YOUR_OBJECT_ID_12", // Average NOK Torque
       paretoChart: "YOUR_OBJECT_ID_13", // Pieces generating non torque
       nokRatioOverTime: "YOUR_OBJECT_ID_14", // NOK Ratio Over Time
