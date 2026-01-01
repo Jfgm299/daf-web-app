@@ -19,10 +19,10 @@ export const qlikConfig = {
     // Volume Production Section
     volumeProduction: {
       piecesProcessed: "UJaWJcJ", // Number of pieces processed KPI
-      avgProcessingTime: "YOUR_OBJECT_ID_2", // Average processing time KPI
-      nokPieces: "YOUR_OBJECT_ID_3", // NOK pieces KPI
-      nokTable: "YOUR_OBJECT_ID_4", // NOK pieces table
-      weekdayChart: "YOUR_OBJECT_ID_5", // Average pieces by weekday chart
+      avgProcessingTime: "LCdpf", // Average processing time KPI
+      nokPieces: "quTpJG", // NOK pieces KPI
+      nokTable: "sDPkgxm", // NOK pieces table
+      weekdayChart: "RZzybZc", // Average pieces by weekday chart
     },
     
     // Time Analysis Section
