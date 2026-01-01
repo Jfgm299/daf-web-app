@@ -27,38 +27,38 @@ export const qlikConfig = {
     
     // Time Analysis Section
     timeAnalysis: {
-      stdDeviation: "YOUR_OBJECT_ID_6", // St deviation processing time
-      longestSpindle: "YOUR_OBJECT_ID_7", // Longest Spindle process
-      longestUryu: "YOUR_OBJECT_ID_8", // Longest Uryu process
-      evolutionChart: "YOUR_OBJECT_ID_9", // Evolution of OK pieces
-      operatingTimeDistribution: "YOUR_OBJECT_ID_10", // Operating time distribution
+      stdDeviation: "bcrPZU", // St deviation processing time
+      longestSpindle: "kVCy", // Longest Spindle process
+      longestUryu: "yUBV", // Longest Uryu process
+      evolutionChart: "safSaQ", // Evolution of OK pieces
+      operatingTimeDistribution: "rYQqXBm", // Operating time distribution
     },
     
     // Quality Analysis Section
     qualityAnalysis: {
-      nokRatio: "YOUR_OBJECT_ID_11", // NOK pieces ratio
-      avgNokTorque: "YOUR_OBJECT_ID_12", // Average NOK Torque
-      paretoChart: "YOUR_OBJECT_ID_13", // Pieces generating non torque
-      nokRatioOverTime: "YOUR_OBJECT_ID_14", // NOK Ratio Over Time
-      torqueVsOperatingTime: "YOUR_OBJECT_ID_15", // Torque vs Operating Time
+      nokRatio: "ttVDV", // NOK pieces ratio
+      avgNokTorque: "mWWHm", // Average NOK Torque
+      paretoChart: "LLCcwD", // Pieces generating non torque
+      nokRatioOverTime: "BnRkEw", // NOK Ratio Over Time
+      torqueVsOperatingTime: "GbrXj", // Torque vs Operating Time
     },
     
     // Tools Performance Section
     toolsPerformance: {
-      uryuNokRatio: "YOUR_OBJECT_ID_16", // Uryu NOK torque ratio
-      spindleNokRatio: "YOUR_OBJECT_ID_17", // 5-Spindle NOK torque ratio
-      torqueDeviation: "YOUR_OBJECT_ID_18", // Average Measured Torque Deviation
-      stabilityVsProductivity: "YOUR_OBJECT_ID_19", // Torque Stability vs Productivity
+      uryuNokRatio: "yVXFwD", // Uryu NOK torque ratio
+      spindleNokRatio: "eDqqsE", // 5-Spindle NOK torque ratio
+      torqueDeviation: "WApDkBJ", // Average Measured Torque Deviation
+      stabilityVsProductivity: "qReMdZ", // Torque Stability vs Productivity
     },
     
     // Process Deep Dive Section
     processDeepDive: {
-      worstOpCode: "YOUR_OBJECT_ID_20", // Worst Op Code NOK%
-      highestTorqueRange: "YOUR_OBJECT_ID_21", // Highest range in measured torque
-      highestVariability: "YOUR_OBJECT_ID_22", // Highest Torque Variability
-      highestFailedBolts: "YOUR_OBJECT_ID_23", // Highest % of failed bolts
-      heatmap: "YOUR_OBJECT_ID_24", // Heatmap Operation x Screw
-      torqueVsAngle: "YOUR_OBJECT_ID_25", // Torque vs Angle Per Op Code
+      worstOpCode: "jVnY", // Worst Op Code NOK%
+      highestTorqueRange: "epsukZ", // Highest range in measured torque
+      highestVariability: "TEu", // Highest Torque Variability
+      highestFailedBolts: "CWnqpe", // Highest % of failed bolts
+      heatmap: "ZwyszU", // Heatmap Operation x Screw
+      torqueVsAngle: "aeXFXe", // Torque vs Angle Per Op Code
     },
   },
 };
