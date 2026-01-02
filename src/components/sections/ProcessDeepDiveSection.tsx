@@ -150,7 +150,7 @@ const ProcessDeepDiveSection = () => {
             <span className="text-muted-foreground">|</span>
 
             <span className="text-muted-foreground text-sm">
-              Westerlo Axle Factory Dashboard
+              Designed by José Fernando Gutiérrez Montero
             </span>
           </div>
         </div>
