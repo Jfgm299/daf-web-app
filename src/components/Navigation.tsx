@@ -20,7 +20,7 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
+      // Actualizar sección activa según el scroll
       const sectionElements = sections.map((s) => ({
         id: s.id,
         element: document.getElementById(s.id),
@@ -60,22 +60,20 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          
+          {/* LOGO: Imagen con padding blanco */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-8 bg-daf-blue rounded-sm" />
-              <div className="w-2 h-8 bg-daf-red rounded-sm" />
+            <div className="bg-white p-1.5 rounded-sm flex items-center justify-center shadow-sm">
+              <img 
+                src="/daf_logo.png" 
+                alt="DAF Logo" 
+                className="h-7 w-auto object-contain" 
+              />
             </div>
-            <span
-              className={`font-bold text-xl transition-colors ${
-                isScrolled ? "text-foreground" : "text-white"
-              }`}
-            >
-              DAF
-            </span>
+
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Navegación Desktop */}
           <div className="hidden md:flex items-center gap-1">
             {sections.map((section) => {
               const IconComponent = iconMap[section.icon as keyof typeof iconMap];
@@ -98,7 +96,7 @@ const Navigation = () => {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Botón Menú Móvil */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
@@ -111,7 +109,7 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Menú Desplegable Móvil */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 animate-fade-in">
             <div className="bg-card rounded-xl shadow-elevated border border-border overflow-hidden">

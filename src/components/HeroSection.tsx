@@ -31,14 +31,6 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* DAF Logo representation */}
-        <div className="flex items-center justify-center gap-2 mb-8 animate-fade-up">
-          <div className="flex gap-1">
-            <div className="w-3 h-12 bg-white rounded-sm" />
-            <div className="w-3 h-12 bg-daf-red rounded-sm" />
-            <div className="w-3 h-12 bg-daf-blue rounded-sm" />
-          </div>
-        </div>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-up delay-100">
           Westerlo Axle Factory

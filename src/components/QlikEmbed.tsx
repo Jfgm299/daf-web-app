@@ -15,6 +15,7 @@ declare global {
           ui?: string;
           "app-id"?: string;
           "object-id"?: string;
+          options?: string; // 1. Agregamos esto para que TS no se queje
         },
         HTMLElement
       >;
@@ -25,12 +26,16 @@ declare global {
 const QlikEmbed = ({ objectId, height = "400px", className = "" }: QlikEmbedProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // The qlik-embed web component handles everything
-    // Just ensure the script is loaded in index.html
-  }, [objectId]);
+  // 2. Definimos las opciones para limpiar el gráfico de "ruido"
+  const embedOptions = JSON.stringify({
+    titles: false,      // Quita el título nativo
+    footers: false,     // Quita el pie de página
+    interactions: {
+      selections: true,
+      contextMenu: false // Quita los tres puntos de menú
+    }
+  });
 
-  // If objectId starts with YOUR_, show placeholder
   if (objectId.startsWith("YOUR_")) {
     return (
       <div
@@ -38,38 +43,29 @@ const QlikEmbed = ({ objectId, height = "400px", className = "" }: QlikEmbedProp
         style={{ height }}
       >
         <div className="text-center p-8">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center">
-            <svg
-              className="w-8 h-8 text-secondary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-              />
-            </svg>
-          </div>
-          <p className="text-muted-foreground text-sm font-medium">
-            Qlik Chart Placeholder
-          </p>
-          <p className="text-xs text-muted-foreground/70 mt-1">
-            Configure object ID in qlikConfig.ts
-          </p>
+          <p className="text-muted-foreground text-sm font-medium">Qlik Placeholder</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div ref={containerRef} className={`qlik-chart-wrapper ${className}`} style={{ height }}>
+    <div 
+      ref={containerRef} 
+      className={`qlik-chart-wrapper ${className}`} 
+      style={{ 
+        height, 
+        width: "100%",
+        display: "flex", 
+        alignItems: "center" 
+      }}
+    >
       <qlik-embed
         ui="analytics/chart"
         app-id={qlikConfig.appId}
         object-id={objectId}
+        options={embedOptions} // 3. Pasamos las opciones aquí
+        style={{ height: "100%", width: "100%" }}
       />
     </div>
   );

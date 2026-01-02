@@ -34,9 +34,6 @@ const ProcessDeepDiveSection = () => {
           <div className="kpi-card">
             <AlertCircle className="w-6 h-6 text-accent mx-auto mb-2" />
 
-            <p className="text-muted-foreground text-xs mb-1">
-              Worst Op Code NOK%
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.worstOpCode}
@@ -47,9 +44,6 @@ const ProcessDeepDiveSection = () => {
           <div className="kpi-card">
             <TrendingUp className="w-6 h-6 text-secondary mx-auto mb-2" />
 
-            <p className="text-muted-foreground text-xs mb-1">
-              Highest range torque
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.highestTorqueRange}
@@ -60,9 +54,6 @@ const ProcessDeepDiveSection = () => {
           <div className="kpi-card">
             <Activity className="w-6 h-6 text-secondary mx-auto mb-2" />
 
-            <p className="text-muted-foreground text-xs mb-1">
-              Highest Variability
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.highestVariability}
@@ -73,9 +64,6 @@ const ProcessDeepDiveSection = () => {
           <div className="kpi-card">
             <XCircle className="w-6 h-6 text-accent mx-auto mb-2" />
 
-            <p className="text-muted-foreground text-xs mb-1">
-              Highest % failed
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.highestFailedBolts}
@@ -91,9 +79,7 @@ const ProcessDeepDiveSection = () => {
               isInView ? "animate-slide-in-left delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Heatmap Operation x Screw (%NOK)
-            </h3>
+
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.heatmap}
@@ -106,9 +92,7 @@ const ProcessDeepDiveSection = () => {
               isInView ? "animate-slide-in-right delay-300" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Torque vs Angle Per Op Code
-            </h3>
+
 
             <QlikEmbed
               objectId={qlikConfig.charts.processDeepDive.torqueVsAngle}

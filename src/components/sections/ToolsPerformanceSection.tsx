@@ -20,7 +20,7 @@ const ToolsPerformanceSection = () => {
           </h2>
 
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Comparative analysis of the Uryu and 5-Spindle tools, examining their
+            Indivudial analysis of the Uryu and 5-Spindle tools, examining their
             performance metrics and identifying optimization opportunities.
           </p>
         </div>
@@ -34,9 +34,6 @@ const ToolsPerformanceSection = () => {
           <div className="kpi-card">
             <Wrench className="w-8 h-8 text-secondary mx-auto mb-3" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              Uryu NOK torque ratio
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.toolsPerformance.uryuNokRatio}
@@ -46,10 +43,6 @@ const ToolsPerformanceSection = () => {
 
           <div className="kpi-card">
             <CircleDot className="w-8 h-8 text-secondary mx-auto mb-3" />
-
-            <p className="text-muted-foreground text-sm mb-1">
-              5-Spindle NOK torque ratio
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.toolsPerformance.spindleNokRatio}
@@ -65,9 +58,6 @@ const ToolsPerformanceSection = () => {
               isInView ? "animate-slide-in-left delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Average Measured Torque Deviation
-            </h3>
 
             <QlikEmbed
               objectId={qlikConfig.charts.toolsPerformance.torqueDeviation}
@@ -80,9 +70,6 @@ const ToolsPerformanceSection = () => {
               isInView ? "animate-slide-in-right delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Torque Stability vs Productivity
-            </h3>
 
             <QlikEmbed
               objectId={qlikConfig.charts.toolsPerformance.stabilityVsProductivity}

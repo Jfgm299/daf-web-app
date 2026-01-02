@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     allowedHosts: [
-      "ojawiu-ip-84-199-17-90.tunnelmole.net",
+      "v6mpou-ip-84-199-17-90.tunnelmole.net",
     ],
   },
   plugins: [

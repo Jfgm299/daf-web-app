@@ -33,10 +33,6 @@ const VolumeProductionSection = () => {
         >
           <div className="kpi-card">
             <Package className="w-8 h-8 text-secondary mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">
-              Number of pieces processed
-            </p>
-
             <QlikEmbed
               objectId={qlikConfig.charts.volumeProduction.piecesProcessed}
               height="90px"
@@ -45,10 +41,6 @@ const VolumeProductionSection = () => {
 
           <div className="kpi-card">
             <Clock className="w-8 h-8 text-secondary mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">
-              Average processing time
-            </p>
-
             <QlikEmbed
               objectId={qlikConfig.charts.volumeProduction.avgProcessingTime}
               height="90px"
@@ -57,10 +49,6 @@ const VolumeProductionSection = () => {
 
           <div className="kpi-card">
             <AlertTriangle className="w-8 h-8 text-accent mx-auto mb-3" />
-            <p className="text-muted-foreground text-sm mb-1">
-              NOK pieces
-            </p>
-
             <QlikEmbed
               objectId={qlikConfig.charts.volumeProduction.nokPieces}
               height="90px"
@@ -68,18 +56,15 @@ const VolumeProductionSection = () => {
           </div>
         </div>
 
-        {/* Charts Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        {/* Charts Grid - Cambiado a una sola columna para apilar gráficos */}
+        <div className="grid grid-cols-1 gap-8 mb-12">
+          {/* Gráfico 1 - Tabla NOK */}
           <div
             className={`${
-              isInView ? "animate-slide-in-left delay-200" : "opacity-0"
+              isInView ? "animate-fade-up delay-200" : "opacity-0"
             }`}
           >
             <div className="chart-container p-4">
-              <h3 className="font-semibold mb-4 text-lg">
-                NOK Pieces Details
-              </h3>
-
               <QlikEmbed
                 objectId={qlikConfig.charts.volumeProduction.nokTable}
                 height="350px"
@@ -87,16 +72,13 @@ const VolumeProductionSection = () => {
             </div>
           </div>
 
+          {/* Gráfico 2 - Promedio por día */}
           <div
             className={`${
-              isInView ? "animate-slide-in-right delay-200" : "opacity-0"
+              isInView ? "animate-fade-up delay-300" : "opacity-0"
             }`}
           >
             <div className="chart-container p-4">
-              <h3 className="font-semibold mb-4 text-lg">
-                Average Pieces by Weekday
-              </h3>
-
               <QlikEmbed
                 objectId={qlikConfig.charts.volumeProduction.weekdayChart}
                 height="350px"
@@ -108,7 +90,7 @@ const VolumeProductionSection = () => {
         {/* Narrative Box */}
         <div
           className={`narrative-box ${
-            isInView ? "animate-fade-up delay-300" : "opacity-0"
+            isInView ? "animate-fade-up delay-400" : "opacity-0"
           }`}
         >
           <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">

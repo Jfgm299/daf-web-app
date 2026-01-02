@@ -34,9 +34,6 @@ const TimeAnalysisSection = () => {
           <div className="kpi-card">
             <Timer className="w-8 h-8 text-secondary mx-auto mb-3" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              St deviation processing time
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.timeAnalysis.stdDeviation}
@@ -45,11 +42,8 @@ const TimeAnalysisSection = () => {
           </div>
 
           <div className="kpi-card">
-            <Gauge className="w-8 h-8 text-secondary mx-auto mb-3" />
+            <Gauge className="w-8 h-8 text-secondary mx-auto mb-3 text-red-500" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              Longest Spindle process
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.timeAnalysis.longestSpindle}
@@ -60,9 +54,6 @@ const TimeAnalysisSection = () => {
           <div className="kpi-card">
             <Activity className="w-8 h-8 text-accent mx-auto mb-3" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              Longest Uryu process
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.timeAnalysis.longestUryu}
@@ -78,9 +69,6 @@ const TimeAnalysisSection = () => {
               isInView ? "animate-slide-in-left delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Evolution of OK Pieces
-            </h3>
 
             <QlikEmbed
               objectId={qlikConfig.charts.timeAnalysis.evolutionChart}
@@ -93,9 +81,7 @@ const TimeAnalysisSection = () => {
               isInView ? "animate-slide-in-right delay-300" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Operating Time Distribution
-            </h3>
+
 
             <QlikEmbed
               objectId={qlikConfig.charts.timeAnalysis.operatingTimeDistribution}

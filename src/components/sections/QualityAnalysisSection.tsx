@@ -34,9 +34,6 @@ const QualityAnalysisSection = () => {
           <div className="kpi-card">
             <Percent className="w-8 h-8 text-secondary mx-auto mb-3" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              NOK pieces ratio
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.qualityAnalysis.nokRatio}
@@ -47,9 +44,6 @@ const QualityAnalysisSection = () => {
           <div className="kpi-card">
             <Zap className="w-8 h-8 text-secondary mx-auto mb-3" />
 
-            <p className="text-muted-foreground text-sm mb-1">
-              Average NOK Torque
-            </p>
 
             <QlikEmbed
               objectId={qlikConfig.charts.qualityAnalysis.avgNokTorque}
@@ -65,9 +59,7 @@ const QualityAnalysisSection = () => {
               isInView ? "animate-slide-in-left delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              NOK Ratio Over Time
-            </h3>
+
 
             <QlikEmbed
               objectId={qlikConfig.charts.qualityAnalysis.nokRatioOverTime}
@@ -80,9 +72,7 @@ const QualityAnalysisSection = () => {
               isInView ? "animate-slide-in-right delay-200" : "opacity-0"
             }`}
           >
-            <h3 className="font-semibold mb-4 text-lg">
-              Pieces Generating Non Torque
-            </h3>
+
 
             <QlikEmbed
               objectId={qlikConfig.charts.qualityAnalysis.paretoChart}
@@ -96,9 +86,7 @@ const QualityAnalysisSection = () => {
             isInView ? "animate-fade-up delay-300" : "opacity-0"
           }`}
         >
-          <h3 className="font-semibold mb-4 text-lg">
-            Torque vs Operating Time
-          </h3>
+
 
           <QlikEmbed
             objectId={qlikConfig.charts.qualityAnalysis.torqueVsOperatingTime}
