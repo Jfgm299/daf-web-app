@@ -102,7 +102,7 @@ const VolumeProductionSection = () => {
             In this overview of volume, we can observe that we have a huge amount
             of pieces produced, divided between the 5 days that the factory is
             open. We can also observe the super high ratio of OK pieces in the
-            top right corner. More about quality in the next sheets.
+            top right corner. More about quality in the next sections.
           </p>
         </div>
       </div>

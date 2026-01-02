@@ -112,7 +112,7 @@ const TimeAnalysisSection = () => {
             If we take a closer look at evolution of OK pieces during 2025, and we
             drill down to the weeks where we have data, we can see that the ratio
             has not decreased. This metric will be very useful long term to check on
-            quality. More about that in the next slide.
+            quality. More about that in the next section.
           </p>
         </div>
       </div>
